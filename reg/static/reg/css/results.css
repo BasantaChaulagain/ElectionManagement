@@ -1,0 +1,45 @@
+.result{
+	/* keep background image here*/
+}
+
+.index{
+	margin-right: 45;
+	padding-left: 15;
+	height: auto;
+	width: 200;
+	background-color: #e4e4e4;
+	float: right;
+}
+#chart1{
+	padding-top: 30;
+	padding-left : 400;
+	padding-bottom: 30;
+}
+#chart2{
+	padding-top: 30;
+	padding-left : 100;
+	padding-bottom: 30;
+	float : left;
+}
+#chart3{
+	padding-top: 10;
+	padding-left : 750;
+	padding-bottom: 30;
+}
+#chart4{
+	padding-top: 30;
+	padding-left : 100;
+	padding-bottom: 30;
+	float : left;
+}
+#chart5{
+	padding-top: 10;
+	padding-left : 750;
+	padding-bottom: 30;
+}
+#chart6{
+	padding-top: 30;
+	padding-left : 100;
+	padding-bottom: 30;
+	float : left;
+}

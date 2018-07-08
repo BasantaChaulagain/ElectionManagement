@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+
+<div class="row">
+     <div class="col-sm-12"><center>
+<h1 xmlns="http://www.w3.org/1999/html">{{message}}</h1>
+     </center> </div></div>
+
+<br>
+<center>
+<form action="{% url form_url %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+<div class="row">
+    <div class="col-sm-3"></div>
+
+        <div class="col-sm-2"> <span class="pull-right">
+                                {% for field in form %}
+                                <label> {{field.label_tag}} </label>
+                                <br>
+                                {% endfor %}
+        </span></div>
+
+        <div class="col-sm-3">   {% for field in form %}
+                                <label> {{field}} </label>
+                                         {% for error in field.errors %}
+                                          <div class="alert alert-danger">
+                                         <strong>{{ error|escape }}</strong>
+                                          {% endfor %}
+                                <br>
+                                {% endfor %}
+        </div>
+
+        {% for error in form.non_field_errors %}
+            Non Field Error:
+                <div class="alert alert-danger">
+                    <strong>{{ error }}</strong>
+                </div>
+        {% endfor %}
+  </div>
+
+    <br>
+<input type="submit" value="Register" class="btn btn-submit btn-lg" />
+
+</form>
+</center>
+
+
+{% endblock %}

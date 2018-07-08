@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+	<!--form as a context-->
+
+  <h2>Your Details:</h2>
+  <br>
+
+{% if record  %}
+
+	<img src="/media/{{img}}" height=200, width=200  /> <br>
+
+	{%for object in result%}
+
+		{%for key,value in object.items%}
+			{{key}} : {{value}}
+			<br>
+		{%endfor%}
+	{%endfor%}
+
+{% else %}
+
+{{result}}
+
+{%endif%}
+{% endblock %}

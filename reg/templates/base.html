@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <title> EMS |
+        {% block title %}{% endblock %}</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'reg/css/bootstrap.min.css' %} "/>
+        <link rel="stylesheet" type="text/css" href="{% static 'reg/css/results.css' %} "/>
+        <script type="text/javascript" src=" {% static 'reg/js/bootstrap.min.js' %} "></script>
+        <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.js' %}"></script>
+        <script type="text/javascript" src="{% static 'fusioncharts/themes/fusioncharts.theme.fint.js' %}"></script>
+    </head>
+
+    <style>
+body {
+        background-color: lightblue;
+     }
+ </style>
+
+
+<body>
+<!--navigation bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">e-Election</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href={% url 'student' %}>Student Registration</a></li>
+      <li><a href={% url 'student' %}>Candidate Registration</a></li>
+      <li><a href={% url 'viewdata' %}>View Data</a></li>
+      <li><a href={% url 'viewresult' %}>View Results</a></li>
+      <li><a href={% url 'admin:index' %}>Admin Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <!-- add extra bootstrap and designing here -->
+
+     {% block content %}{% endblock %}
+    </body>
+</html>

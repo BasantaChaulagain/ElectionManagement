@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+
+  <h3>{{message}} {{form_number}}</h3>
+<br><br><br>
+
+<div class="row">
+
+<center>
+        <a href={% url 'election' %}><button type="button" class="btn btn-primary btn-lg">Create Election</button> </a> &nbsp;
+        <a href={% url 'post' %}><button type="button" class="btn btn-primary btn-lg">Add Post</button> </a>
+
+	<br> <hr style="width: 50%; color: black; height: 1px; background-color:black;" /> <br>
+      <a href={% url 'party' %}><button type="button" class="btn btn-success btn-lg">Party Registration</button> </a> &nbsp;
+      <a href={% url 'college' %}><button type="button" class="btn btn-success btn-lg"> College Registration</button> </a>
+    <br><br>
+      <a href={% url 'student' %}><button type="button" class="btn btn-success btn-lg">Student Registration</button> </a> &nbsp;
+      <a href={% url 'candidate' %}><button type="button" class="btn btn-success btn-lg">Candidate Registration</button> </a>
+
+<br> <hr style="width: 50%; color: black; height: 1px; background-color:black;" /> <br>
+
+      <a href={% url 'viewdata' %}><button type="button" class="btn btn-info btn-lg">View Info</button> </a>
+
+</center>
+</div>
+
+
+
+
+<br><br>
+
+
+<br><br>
+
+{% endblock %}

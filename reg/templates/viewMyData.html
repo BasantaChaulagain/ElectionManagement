@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+	
+  <h2>Enter the data to search your database.</h2>
+  <br>
+
+<form action="{% url 'viewdata' %}" method="post">
+{% csrf_token %}
+Your Citizenship_id  : 
+<input type="text" name="citz" rows="2" cols="10">
+
+<input type="submit" value="Submit" />
+</form>
+
+
+{% endblock %}
